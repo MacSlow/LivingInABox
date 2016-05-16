@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "calcBox.h"
 #include "measure.h"
 #include "test_data.h"
