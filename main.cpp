@@ -1,6 +1,6 @@
 #include "test_calcBox.h"
 
-int _tmain(int argc, _TCHAR* argv[])
+int main (int argc, char* argv[])
 {
     test_calcBox();
     return 0;

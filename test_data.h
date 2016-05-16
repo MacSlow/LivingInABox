@@ -1,4 +1,4 @@
-#pragma once;
+#pragma once
 
 #include <vector>
 #include "simd_double2.h"
