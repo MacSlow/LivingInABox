@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Living in a box", "Living in a box\Living in a box.vcxproj", "{1416B58F-C3A5-47F2-97F0-4DD258AB5313}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1416B58F-C3A5-47F2-97F0-4DD258AB5313}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1416B58F-C3A5-47F2-97F0-4DD258AB5313}.Debug|Win32.Build.0 = Debug|Win32
+		{1416B58F-C3A5-47F2-97F0-4DD258AB5313}.Debug|x64.ActiveCfg = Debug|x64
+		{1416B58F-C3A5-47F2-97F0-4DD258AB5313}.Debug|x64.Build.0 = Debug|x64
+		{1416B58F-C3A5-47F2-97F0-4DD258AB5313}.Release|Win32.ActiveCfg = Release|Win32
+		{1416B58F-C3A5-47F2-97F0-4DD258AB5313}.Release|Win32.Build.0 = Release|Win32
+		{1416B58F-C3A5-47F2-97F0-4DD258AB5313}.Release|x64.ActiveCfg = Release|x64
+		{1416B58F-C3A5-47F2-97F0-4DD258AB5313}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
