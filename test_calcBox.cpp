@@ -9,9 +9,9 @@ using namespace std;
 using namespace xml;
 
 //please adopt to your system setup
-const std::string sProcessor       = "Intel Core i7-2670 QM CPU @ 2.20 GHz";
-const std::string sCompiler        = "MVC 2012";
-const std::string sCompilerOptions = "/O2 /Oi /Ot /arch:AVX"; 
+const std::string sProcessor       = "Intel(R) Core(TM) i5-3427U CPU @ 1.80GHz";
+const std::string sCompiler        = "g++ 5.2.1";
+const std::string sCompilerOptions = "-std=c++14 -Wall -pedantic -O3 -mavx -fopenmp"; 
 
 
 namespace { //anonymous namespace for local helper functions
@@ -173,7 +173,7 @@ void test_calcBox()
         TEST(v, simd2_accumulate_parallel)
     }
            
-    for (auto i = 0; i < maxTest; ++i) 
+    /*for (auto i = 0; i < maxTest; ++i) 
     {
         auto v = testVectorDouble4(i); 
         auto box = simd4_range_for::calcBox(v); //to validate result
@@ -182,7 +182,7 @@ void test_calcBox()
         TEST(v, simd4_while)
         TEST(v, simd4_while_while)
         TEST(v, simd4_future_while)
-    }
+    }*/
 
     cout << xml.text() << endl;
 }
