@@ -1,0 +1,14 @@
+Since this is a cmake-based project the usual procedure to compile applies:
+
+ * cd build
+ * cmake ..
+ * make
+ * ./LivingInABox >result.xml
+
+Sofar this has been tested on Linux (Ubuntu 15.10) with g++ 5.2.1.
+Apart from the usual build-dependencies like g++ and cmake, OpenMP is
+required too.
+
+ * cmake 3.2.2-2ubuntu3
+ * g++ 5.2.1-3ubuntu1
+ * lib64gomp1 5.2.1-22ubuntu2

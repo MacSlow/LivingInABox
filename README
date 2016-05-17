@@ -1,0 +1,15 @@
+This is a port of Werner Clemens' bounding-box benchmark originating on Windows
+with MSVC 2012. He presented that as part of his talk "Living In A Box" he gave
+at our local C++-meeting, which is held each month (meeting-homepage, German):
+
+ * http://www.wilkening-online.de/programmieren/c++-user-treffen-aachen/2016_05_12/bericht-2016-05-12.html
+
+I made a first attempt at porting it over to a CMake-based project compiling
+under Linux/Ubuntu (15.10) with g++ 5.2.1 using pthreads and OpenMP.
+
+There's still a segmentation-fault in the VectorDouble4()-related tests. I've
+commented them out for the time being.
+
+We want to try to make this codebase work in a more platform-independent manner
+to facilitate gathering more benchmarks from different compiler/architecture-
+-combinations and compare their performance.
