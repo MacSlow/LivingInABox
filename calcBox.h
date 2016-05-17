@@ -248,7 +248,7 @@ namespace for_if_if_pragma_no_vector
     {
         auto mi = v.front();
         auto ma = v.front();
-        //#pragma loop( no_vector )
+        #pragma omp parallel num_threads(0)
         for (size_t i = 0; i != v.size(); ++i) {
             const auto& d = v[i];
             if (d < mi) mi = d;
@@ -264,7 +264,7 @@ namespace for_if_else_pragma_no_vector
     {
         auto mi = v.front();
         auto ma = v.front();
-        //#pragma loop( no_vector )
+        #pragma omp parallel num_threads(0)
         for (size_t i = 0; i != v.size(); ++i) {
             const auto& d = v[i];
             if (d < mi) mi = d;
@@ -279,7 +279,7 @@ namespace for_if_continue_pragma_no_vector
     {
         auto mi = v.front();
         auto ma = v.front();
-        //#pragma loop( no_vector )
+        #pragma omp parallel num_threads(0)
         for (size_t i = 0; i != v.size(); ++i) {
             const auto& d = v[i];
             if (mi <= d && d <= ma) continue;
@@ -295,7 +295,7 @@ namespace for_conditional_pragma_no_vector
     {
         auto mi = v.front();
         auto ma = v.front();
-        //#pragma loop( no_vector )
+        #pragma omp parallel num_threads(0)
         for (size_t i = 0; i != v.size(); ++i) {
             const auto& d = v[i];
             d < mi ? mi = d : ma < d ? ma = d : d; 
@@ -309,7 +309,7 @@ namespace for_if_if_pragma_hint_parallel
     {
         auto mi = v.front();
         auto ma = v.front();
-        //#pragma loop( hint_parallel(0) )
+        #pragma omp parallel num_threads(4)
         for (size_t i = 0; i != v.size(); ++i) {
             const auto& d = v[i];
             if (d < mi) mi = d;
