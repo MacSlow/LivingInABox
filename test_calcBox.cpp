@@ -64,7 +64,7 @@ namespace { //anonymous namespace for local helper functions
     
     //helper for vector<simd::double4>
     template<class Algorithm>
-    XmlLine testLine(const vector<double4>& v, const Box<double>& controlBox, Algorithm algorithm, const std::string& name)
+    XmlLine testLine(const vector<double4, AlignedAllocator<double4, 32>>& v, const Box<double>& controlBox, Algorithm algorithm, const std::string& name)
     {
         auto box_ms = measure_milliseconds(v, algorithm);
         auto box    = box_ms.first;
@@ -173,7 +173,7 @@ void test_calcBox()
         TEST(v, simd2_accumulate_parallel)
     }
            
-    /*for (auto i = 0; i < maxTest; ++i) 
+    for (auto i = 0; i < maxTest; ++i) 
     {
         auto v = testVectorDouble4(i); 
         auto box = simd4_range_for::calcBox(v); //to validate result
@@ -182,7 +182,7 @@ void test_calcBox()
         TEST(v, simd4_while)
         TEST(v, simd4_while_while)
         TEST(v, simd4_future_while)
-    }*/
+    }
 
     cout << xml.text() << endl;
 }
