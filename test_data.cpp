@@ -1,4 +1,5 @@
 #include "test_data.h"
+#include "allocator.h"
 
 using namespace std;
 using namespace simd;
@@ -22,14 +23,14 @@ namespace { //anonymous namespace for local helper
         return v2;
     }
     
-    /*vector<double4> toVectorDouble4(const vector<double>& v)
+    vector<double4, AlignedAllocator<double4, 32>> toVectorDouble4(const vector<double>& v)
     {
-        vector<double4> v4;
+        vector<double4, AlignedAllocator<double4, 32>> v4;
         v4.reserve(v.size() / 4);
         for (size_t i = 0; i < v.size(); i += 4)
             v4.emplace_back(v[i], v[i+1], v[i+2], v[i+3]);
         return v4;
-    }*/
+    }
 }//end of anonymous namespace for local helper
 
 
@@ -51,7 +52,7 @@ vector<double2> testVectorDouble2(int i)
     return toVectorDouble2(testVectorDouble(i));
 }
 
-/*vector<double4> testVectorDouble4(int i)
+vector<double4, AlignedAllocator<double4, 32>> testVectorDouble4(int i)
 {
     return toVectorDouble4(testVectorDouble(i));
-}*/
+}
