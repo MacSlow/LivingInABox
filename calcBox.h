@@ -8,6 +8,7 @@
 #include "box.h"
 #include "simd_double2.h"
 #include "simd_double4.h"
+#include "allocator.h"
 
 using namespace std; //sorry for this "using" in global namespace 
 
@@ -1142,7 +1143,7 @@ namespace simd2_accumulate_parallel
 
 namespace simd4_range_for
 {    
-    Box<double> calcBox(const vector<simd::double4>& v)
+    Box<double> calcBox(const vector<simd::double4, AlignedAllocator<simd::double4, 32>>& v)
     {
         using namespace simd;
 
@@ -1157,7 +1158,7 @@ namespace simd4_range_for
 }
 namespace simd4_range_for_range_for
 {    
-    Box<double> calcBox(const vector<simd::double4>& v)
+    Box<double> calcBox(const vector<simd::double4, AlignedAllocator<simd::double4, 32>>& v)
     {
         using namespace simd;
 
@@ -1174,7 +1175,7 @@ namespace simd4_range_for_range_for
 }
 namespace simd4_while
 {    
-    Box<double> calcBox(const vector<simd::double4>& v)
+    Box<double> calcBox(const vector<simd::double4, AlignedAllocator<simd::double4, 32>>& v)
     {
         using namespace simd;
 
@@ -1192,7 +1193,7 @@ namespace simd4_while
 }
 namespace simd4_while_while
 {    
-    Box<double> calcBox(const vector<simd::double4>& v)
+    Box<double> calcBox(const vector<simd::double4, AlignedAllocator<simd::double4, 32>>& v)
     {
         using namespace simd;
 
@@ -1217,7 +1218,7 @@ namespace simd4_while_while
 }
 namespace simd4_future_while
 {    
-    Box<double> calcBox(const vector<simd::double4>& v)
+    Box<double> calcBox(const vector<simd::double4, AlignedAllocator<simd::double4, 32>>& v)
     {
         using namespace simd;
 
